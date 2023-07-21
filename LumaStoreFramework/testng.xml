@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener
+			class-name="com.lumastore.utilities.ExtentListenerClass">
+		</listener>
+	</listeners>
+	<test name="Test">
+		<classes>
+			<!--class name="com.opencart.testCases.TC_createAnAccountPageTest" / -->
+			<class name="com.lumastore.testcases.TC_RegisteredUserWelcomePageTest" />
+			<class name="com.lumastore.testcases.TC_homePageTest" />
+			<class name="com.lumastore.testcases.TC_loginPageTest" />
+			<!-- class name="com.opencart.testCases.TC_dataDrivenLoginPageTest" /-->
+			<!-- class name="com.opencart.testCases.TC_ProductPurchaseFlowTest" /-->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
