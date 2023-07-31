@@ -60,7 +60,14 @@ public class SearchResultsPage {
 	
 	@FindBy(xpath = "//body//div//div//div[3]//div[3]//div[1]//select[1]")
 	WebElement itemsPerPageDropdownVisible36;
+	
 */	
+	@FindBy(linkText = "Home")
+	WebElement homeLink;
+	
+	
+	
+	
 
 	// Perform action on web elements
 	public String displaySortLabel() {
@@ -152,5 +159,8 @@ public class SearchResultsPage {
 		dropDwn.selectByValue("12");
 	}
 */
+	public void clickOnHomeLink() {
+		homeLink.click();
+	}
 	
 }

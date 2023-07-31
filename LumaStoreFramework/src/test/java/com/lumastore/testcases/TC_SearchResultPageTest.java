@@ -106,7 +106,7 @@ public class TC_SearchResultPageTest extends BaseClass {
 		
 	}
 	
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 5, enabled = false)
 	public void verifyItemsPerPageDropDownFunctionality() throws Exception {
 		
 		SearchResultsPage perPageDropdown = new SearchResultsPage(driver);
@@ -180,7 +180,7 @@ public class TC_SearchResultPageTest extends BaseClass {
 		
 	}
 	
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 6, enabled = false)
 	public void verifyNextAndPreviousPageButtonsFunctionality() throws Exception {
 		
 		SearchResultsPage nextPreviousButton = new SearchResultsPage(driver);
@@ -206,5 +206,15 @@ public class TC_SearchResultPageTest extends BaseClass {
 		
 		nextPreviousButton.clickOnPreviousPageActionButton();
 		logger.info("Clicked on previous page");
+	}
+	
+	@Test(priority = 7, enabled = true)
+	public void verifyHomeLink() {
+		
+		SearchResultsPage goToHomeLink = new SearchResultsPage(driver);
+		
+		goToHomeLink.clickOnHomeLink();
+		logger.info("Home link working and verified");
+				
 	}
 }
