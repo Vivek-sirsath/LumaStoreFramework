@@ -1,63 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="4" total="6" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-30T18:03:06Z" name="Suite" finished-at="2023-07-30T18:03:54Z" duration-ms="47762">
+  <suite started-at="2023-07-31T10:38:29Z" name="Default suite" finished-at="2023-07-31T10:39:22Z" duration-ms="52408">
     <groups>
     </groups>
-    <test started-at="2023-07-30T18:03:06Z" name="Test" finished-at="2023-07-30T18:03:54Z" duration-ms="47762">
-      <class name="com.lumastore.testcases.TC_dataDrivenLoginPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.lumastore.testcases.TC_dataDrivenLoginPageTest@5a5338df]" started-at="2023-07-30T18:03:06Z" name="setup" finished-at="2023-07-30T18:03:24Z" duration-ms="17396" status="PASS">
+    <test started-at="2023-07-31T10:38:29Z" name="Default test" finished-at="2023-07-31T10:39:22Z" duration-ms="52408">
+      <class name="com.lumastore.testcases.TC_SearchResultPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.lumastore.testcases.TC_SearchResultPageTest@732d0d24]" started-at="2023-07-31T10:38:29Z" name="setup" finished-at="2023-07-31T10:38:47Z" duration-ms="17456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lumastore.testcases.TC_dataDrivenLoginPageTest@5a5338df]" started-at="2023-07-30T18:03:25Z" name="verifyDataDrivenTest" data-provider="LoginDataProvider" finished-at="2023-07-30T18:03:40Z" duration-ms="15340" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[vivek.sirsath007@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Aw96b6###]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Vivek Sirsath]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifySearchBoxFunctionality()[pri:1, instance:com.lumastore.testcases.TC_SearchResultPageTest@732d0d24]" started-at="2023-07-31T10:38:47Z" name="verifySearchBoxFunctionality" finished-at="2023-07-31T10:38:56Z" duration-ms="9681" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDataDrivenTest -->
-        <test-method signature="verifyDataDrivenTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lumastore.testcases.TC_dataDrivenLoginPageTest@5a5338df]" started-at="2023-07-30T18:03:40Z" name="verifyDataDrivenTest" data-provider="LoginDataProvider" finished-at="2023-07-30T18:03:53Z" duration-ms="12571" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[deepika.sonawane08@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[deepika@123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Deepika Sonawane]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifySearchBoxFunctionality -->
+        <test-method signature="verifyNextAndPreviousPageButtonsFunctionality()[pri:5, instance:com.lumastore.testcases.TC_SearchResultPageTest@732d0d24]" started-at="2023-07-31T10:38:56Z" name="verifyNextAndPreviousPageButtonsFunctionality" finished-at="2023-07-31T10:39:21Z" duration-ms="24227" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDataDrivenTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.lumastore.testcases.TC_dataDrivenLoginPageTest@5a5338df]" started-at="2023-07-30T18:03:53Z" name="tearDown" finished-at="2023-07-30T18:03:54Z" duration-ms="707" status="PASS">
+        </test-method> <!-- verifyNextAndPreviousPageButtonsFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.lumastore.testcases.TC_SearchResultPageTest@732d0d24]" started-at="2023-07-31T10:39:21Z" name="tearDown" finished-at="2023-07-31T10:39:22Z" duration-ms="987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.lumastore.testcases.TC_dataDrivenLoginPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.lumastore.testcases.TC_SearchResultPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

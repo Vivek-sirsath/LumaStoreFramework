@@ -23,11 +23,32 @@ public class HomePage {
 	@FindBy(linkText = "Sign In")
 	WebElement signin;
 	
+	@FindBy(id = "search")
+	WebElement homeSearchBox;
+	
+	@FindBy(xpath = "//button[@title='Search']")
+	WebElement searchButton;
+	
+	
+	
+	
 		
 	// perform action on web element
 	public void clickOnSignInLink() {
 		signin.click();
 	}
 	
+	public void clickAndEnterTextInSearchBox(String data) {
+		homeSearchBox.sendKeys(data);;
+	}
+/*	
+	public String getSearchBoxText() {
+		String text = homeSearchBox.getText();
+		return text;
+	}
+*/
+	public void clickOnSearchButton() {
+		searchButton.click();
+	}
 	
 }
