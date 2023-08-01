@@ -1,0 +1,5 @@
+[INFO ] 2023-07-31 23:23:42.863 [main] BaseClass - url opened
+[INFO ] 2023-07-31 23:23:46.710 [main] BaseClass - Clicked on search box successfully
+[INFO ] 2023-07-31 23:23:46.711 [main] BaseClass - Entered 'jacket' in search box successfully
+[INFO ] 2023-07-31 23:23:52.732 [main] BaseClass - Clicked on search button and Search functionality verified
+[INFO ] 2023-07-31 23:23:55.318 [main] BaseClass - Home link working and verified
