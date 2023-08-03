@@ -35,7 +35,6 @@ public class BaseClass {
 	@BeforeClass
 	public void setup() {    // Setup to launch browser
 		
-		//launch browser
 				switch(browser.toLowerCase())
 				{
 				case "chrome":
