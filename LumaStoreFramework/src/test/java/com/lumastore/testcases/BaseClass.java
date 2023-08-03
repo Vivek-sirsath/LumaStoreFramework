@@ -33,7 +33,7 @@ public class BaseClass {
 	public static Logger logger;
 	
 	@BeforeClass
-	public void setup() {
+	public void setup() {    // Setup to launch browser
 		
 		//launch browser
 				switch(browser.toLowerCase())
