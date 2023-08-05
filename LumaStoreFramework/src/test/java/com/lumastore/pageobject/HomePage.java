@@ -15,7 +15,7 @@ public class HomePage {
 
 		ldriver = rdriver;
 
-		PageFactory.initElements(rdriver, this);   // 'this' is the object of this page
+		PageFactory.initElements(rdriver, this); // 'this' is the object of this page
 
 	}
 
@@ -23,32 +23,40 @@ public class HomePage {
 	@FindBy(linkText = "Sign In")
 	WebElement signin;
 	
-	@FindBy(id = "search")
+	@FindBy(css = "#search")
 	WebElement homeSearchBox;
-	
+/*
+	Here we were not able to find the text inside 'Search Box' by using X-path
+	Hence, used css and getAttribute() method. 
+	Used below line as a reference.
+//  String password=driver.findElement(By.cssSelector("ur css path")).getAttribute("placeholder");
+ 	
+*/
 	@FindBy(xpath = "//button[@title='Search']")
 	WebElement searchButton;
 	
+
+	// Perform action on Web Elements
 	
+	public void clickOnSearchBox() {
+		homeSearchBox.click();
+	}
 	
-	
-		
-	// perform action on web element
 	public void clickOnSignInLink() {
 		signin.click();
 	}
-	
+
 	public void clickAndEnterTextInSearchBox(String data) {
-		homeSearchBox.sendKeys(data);;
+		homeSearchBox.sendKeys(data);
 	}
-/*	
-	public String getSearchBoxText() {
-		String text = homeSearchBox.getText();
-		return text;
-	}
-*/
+
 	public void clickOnSearchButton() {
 		searchButton.click();
 	}
 	
+	public String getSearchBoxText() {
+		String txt = homeSearchBox.getAttribute("placeholder");
+		return txt;
+	}
+
 }
