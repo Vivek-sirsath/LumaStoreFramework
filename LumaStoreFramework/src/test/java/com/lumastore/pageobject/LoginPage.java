@@ -5,7 +5,7 @@
  * 
  * 1) @FindBy = (Declaration)
  * 2) PageFactory.initElements(driver, this) = (Initialization)
- * 3) Calling method to test class (Utilization)
+ * 3) Calling method to test class (Utilization) (It is in Test Class (TC_loginPageTest.java))
  * 
 */
 package com.lumastore.pageobject;
@@ -35,9 +35,7 @@ public class LoginPage {
 		
 			
 		// Identify Web Elements in Login Page
-		
-
-		
+				
 		@FindBy(id = "email")
 		WebElement emailId;
 		
