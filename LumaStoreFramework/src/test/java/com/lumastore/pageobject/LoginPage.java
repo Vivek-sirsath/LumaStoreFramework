@@ -1,3 +1,13 @@
+/* Page Object Model using PageFactory class -
+ * 
+ * PageFactory is an In-Built Page Object Model concept for Selenium WebDriver
+ * 3 important steps -
+ * 
+ * 1) @FindBy = (Declaration)
+ * 2) PageFactory.initElements(driver, this) = (Initialization)
+ * 3) Calling method to test class (Utilization)
+ * 
+*/
 package com.lumastore.pageobject;
 
 import org.openqa.selenium.WebDriver;
