@@ -20,6 +20,7 @@ public class ReadConfig {
 			properties.load(fis);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			// We can change the 'IOException' to 'Exception'
 			e.printStackTrace();
 		}
 	}

@@ -51,10 +51,10 @@ public class BaseClass {
 					WebDriverManager.firefoxdriver().setup();
 					driver = new FirefoxDriver();
 					break;
+					
 				default:
 					driver = null;
 					break;
-
 				}
 		
 		// Maximize browser window
