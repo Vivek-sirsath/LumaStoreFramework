@@ -60,7 +60,7 @@ public class BaseClass {
 		// Maximize browser window
 		driver.manage().window().maximize();
 		
-		// It is good practice to use implicite wait after maximizing the window.
+		// It is good practice to use implicit wait after maximizing the window.
 		// Give wait for synchronization
 		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		
