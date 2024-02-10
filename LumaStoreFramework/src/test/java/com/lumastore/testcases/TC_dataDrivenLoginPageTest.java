@@ -51,6 +51,8 @@ public class TC_dataDrivenLoginPageTest extends BaseClass {
 		String fileName = System.getProperty("user.dir") + "\\TestData\\UsersTestData.xlsx";
 
 		// Sheet Name = UserData
+		// Here we don't need to create the object of 'ReadExcelFile' Class
+		// Because, we've created the methods static, directly called the method using ClassName
 		int ttlRows = ReadExcelFile.getRowCount(fileName, "UserData");
 		int ttlColumns = ReadExcelFile.getColCount(fileName, "UserData");
 
