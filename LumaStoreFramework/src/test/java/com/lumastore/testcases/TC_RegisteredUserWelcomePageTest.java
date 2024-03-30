@@ -25,12 +25,6 @@ public class TC_RegisteredUserWelcomePageTest extends BaseClass {
 
 		RegisteredUserWelcomePage wPage = new RegisteredUserWelcomePage(driver);
 
-		/*
-		 * String name = wPage.getWelcomeName(); Assert.assertEquals("Vivek Sirsath",
-		 * name);
-		 * 
-		 * System.out.println( "User Name: " + name);
-		 */
 		wPage.clickOnWhatsNewTab();
 		driver.navigate().back();
 		logger.info("Whats New tab verified");
@@ -67,6 +61,8 @@ public class TC_RegisteredUserWelcomePageTest extends BaseClass {
 	@Test(enabled = true, priority = 4)
 	public void verifyRegisteredUserNameText() throws Exception {
 		RegisteredUserWelcomePage user = new RegisteredUserWelcomePage(driver);
+
+		// 1st Approach
 		String welcomeName = user.verifyRegisteredUserNameText().toString();
 
 		if (welcomeName.contains("Vivek Sirsath")) {
@@ -76,8 +72,14 @@ public class TC_RegisteredUserWelcomePageTest extends BaseClass {
 			logger.info("Registered username Verificatin Failed - Screenshot is taken");
 			captureScreenShot(driver, "welcomeNameVerification");
 			Assert.assertTrue(false);
+			logger.info("1st Approach to verify registered user is verified");
 		}
 
+		// 2nd Approach
+		String name = user.verifyRegisteredUserNameText();
+		Assert.assertEquals("Vivek Sirsath", name);
+		System.out.println("User Name: " + name);
+		logger.info("2nd Approach to verify registered user is verified");
 	}
 
 }
