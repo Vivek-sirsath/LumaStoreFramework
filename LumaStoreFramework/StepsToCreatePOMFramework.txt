@@ -1,0 +1,101 @@
+- Open Eclipse > File > New > Maven Project >
+  > Select checkbox 'Create a simple project (skip archetype selection)'
+  > Click on Next button
+  > Keep selected 'maven-archetype-quickstart 1.1', which will create simple maven project
+  > Click on Next
+- Enter GroupID : OpencartV1.0 (Generally its a Project Name)
+  Enter ArtifactID : OpencartV1.0 (Generally its a Project Name)
+  Click on Finish button. 
+- A Maven project will be created.
+- Delete 2 packages created by default,
+         (src/main/java)
+         (src/main/resources)
+- These two packages used by Developers. So we should delete them.
+- Keep 2 packages created by default,
+         (src/test/java)
+         (src/test/resources)
+- We should not keep resource files in (src/test/resources) 
+  because its a package, and package contains java classes.         
+
+- Update required dependancies in POM.XML :- 
+
+  selenium-java      4.20.0
+  testng             7.8.0
+  
+  poi                5.2.5    ... for Excel
+  poi-ooxml          5.2.5    ... for Excel
+  
+  log4j-core         2.23.1   ... for Logging
+  log4j-api          2.23.1   ... for Logging
+  log4j-slf4j-impl   2.23.1   ... optional if we get some exceptions.
+  
+  extentreports      5.1.1
+  
+  commons-io         2.13.0
+  commons-lang3      3.12.0   ... for RandomString, RandomNumbers
+
+- Right click on project > Maven > Update Project... 
+  > Select 'Force Update of Snapshot/Releases' > Click on OK
+  
+_________________________________________________________________________________
+_________________________________________________________________________________
+
+# Logging :-
+----------
+
+- logging is achieved by 'log4j2.xml' OR 'log4j2.properties' file
+- Record all the events in the form of text.
+- Log Levels :- All < Trace < Debug < Info < Warn < Error < Fatal < Off
+
+# Components of 'log4j2.properties' file
+1) Appenders - Appenders will decide where to generate logs (console/file)
+2) Loggers - What type of logs generate ( All < Trace < Debug < Info < Warn < Error < Fatal < Off )
+
+- Add 'log4j2.xml' file to (src/test/resources)
+- Update log messages in 'BaseClass.java' and in Test classes files.
+  Eventually after execution logs will be generated in log file.
+
+##############################################################################################
+ Sample - log4j2.xml
+ -------------------
+ 
+ <?xml version="1.0" encoding="UTF-8"?>
+
+
+<configuration status="WARN">
+
+	<properties>
+		<property name="basePath">./logs</property>
+	</properties>
+
+	<Appenders>
+		<console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				patternn="%d{HH:mm:ss.SSS} [%t] %-5level %loggger{36} - %msg%n" />
+		</console>
+
+		<RollingFile name="File"
+			fileName="${basePath}//automation.log"
+			filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %loggger{36} - %msg%n" />
+			<SizeBasedTriggeringPolicy size="5000" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Root level="Info"> <!-- Here we can use multiple log levels All < Trace < Debug < Info < Warn < Error < Fatal < Off -->
+			<!-- <AppenderRef ref="Console"/> -->
+			<AppenderRef ref="File" />
+
+		</Root>
+	</Loggers>
+
+</configuration>
+ 
+
+
+
+
+
+
