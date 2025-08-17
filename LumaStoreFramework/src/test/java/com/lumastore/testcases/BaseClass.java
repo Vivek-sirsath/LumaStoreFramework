@@ -38,7 +38,8 @@ public class BaseClass {
 				switch(browser.toLowerCase())
 				{
 				case "chrome":
-					System.setProperty("webdriver.chrome.driver", "E:\\Educational\\chromedriver.exe");
+					// System.setProperty("webdriver.chrome.driver", "E:\\Educational\\chromedriver.exe");
+					WebDriverManager.chromedriver().setup();
 					driver = new ChromeDriver();
 					break;
 
