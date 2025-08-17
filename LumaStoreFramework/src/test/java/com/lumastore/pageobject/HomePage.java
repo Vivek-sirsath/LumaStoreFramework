@@ -13,7 +13,7 @@ public class HomePage {
 	// Create constructor
 	public HomePage(WebDriver rdriver) {
 
-		ldriver = rdriver;
+		ldriver = rdriver;  // Here we need to initialize local driver by remote driver.
 
 		PageFactory.initElements(rdriver, this); // 'this' is the object of this page
 
@@ -22,6 +22,9 @@ public class HomePage {
 	// Identify Web Elements - sign in link
 	@FindBy(linkText = "Sign In")
 	WebElement signin;
+	
+	@FindBy(linkText = "Create an Account")
+	WebElement createAccLink;
 	
 	@FindBy(css = "#search")
 	WebElement homeSearchBox;
@@ -44,6 +47,10 @@ public class HomePage {
 	
 	public void clickOnSignInLink() {
 		signin.click();
+	}
+	
+	public void clickOnCreateAnAccountLink() {
+		createAccLink.click();
 	}
 
 	public void clickAndEnterTextInSearchBox(String data) {
