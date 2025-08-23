@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-	// Create object of WebDriver
+	// 1. Create object of WebDriver
 	WebDriver ldriver;
 
-	// Create constructor
+	// 2. Create a constructor of class
 	public HomePage(WebDriver rdriver) {
 
 		ldriver = rdriver;  // Here we need to initialize local driver by remote driver.
@@ -19,7 +19,7 @@ public class HomePage {
 
 	}
 
-	// Identify Web Elements - sign in link
+	// 3. Identify Web Elements
 	@FindBy(linkText = "Sign In")
 	WebElement signin;
 	
@@ -39,7 +39,7 @@ public class HomePage {
 	WebElement searchButton;
 	
 
-	// Perform action on Web Elements
+	// 4. Perform action on Web Elements
 	
 	public void clickOnSearchBox() {
 		homeSearchBox.click();
