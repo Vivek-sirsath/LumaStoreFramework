@@ -17,10 +17,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	// Create object of WebDriver
+	    // 1. Create object of WebDriver
 		WebDriver ldriver;
 
-		// Create constructor
+		// 2. Create constructor
 		public LoginPage(WebDriver rdriver) {
 
 			ldriver = rdriver;
@@ -29,7 +29,7 @@ public class LoginPage {
 
 		}
 		
-		// Identify Web Elements in Home Page - e.g. sign in link
+		// 3. Identify Web Elements in Home Page
 		@FindBy(linkText = "Sign In")
 		WebElement signin;
 		
@@ -50,7 +50,7 @@ public class LoginPage {
 		
 		
 	
-		// perform action on web elements
+		// 4. perform action on web elements
 		
 		public void clickOnSignInLink() {
 			signin.click();
