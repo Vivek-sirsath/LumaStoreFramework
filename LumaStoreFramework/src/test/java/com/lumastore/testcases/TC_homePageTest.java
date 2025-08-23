@@ -3,7 +3,7 @@ package com.lumastore.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.lumastore.pageobject.CreateAnAccountPage;
+import com.lumastore.pageobject.CreateNewCustomerAccountPage;
 import com.lumastore.pageobject.HomePage;
 
 
@@ -58,7 +58,7 @@ public class TC_homePageTest extends BaseClass {
 		hPage.clickOnCreateAnAccountLink();
 		logger.info("Clicked on 'Create An Account' link");
 		
-		CreateAnAccountPage createAccPage = new CreateAnAccountPage(driver);
+		CreateNewCustomerAccountPage createAccPage = new CreateNewCustomerAccountPage(driver);
 		String pgText = createAccPage.getPageTitleWrapperText();
 		System.out.println("Page Title: " + pgText);
 		Assert.assertEquals(pgText, "Create New Customer Account");
