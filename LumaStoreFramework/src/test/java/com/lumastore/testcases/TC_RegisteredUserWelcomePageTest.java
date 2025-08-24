@@ -63,7 +63,7 @@ public class TC_RegisteredUserWelcomePageTest extends BaseClass {
 		RegisteredUserWelcomePage user = new RegisteredUserWelcomePage(driver);
 
 		// 1st Approach
-		String welcomeName = user.verifyRegisteredUserNameText().toString();
+		String welcomeName = user.getRegisteredUserNameText().toString();
 
 		if (welcomeName.contains("Vivek Sirsath")) {
 			logger.info("Name of registered user verified");
@@ -76,7 +76,7 @@ public class TC_RegisteredUserWelcomePageTest extends BaseClass {
 		}
 
 		// 2nd Approach
-		String name = user.verifyRegisteredUserNameText();
+		String name = user.getRegisteredUserNameText();
 		Assert.assertEquals("Vivek Sirsath", name);
 		System.out.println("User Name: " + name);
 		logger.info("2nd Approach to verify registered user is verified");
