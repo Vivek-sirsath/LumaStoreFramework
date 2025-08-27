@@ -58,7 +58,7 @@ public class TC_dataDrivenLoginPageTest extends BaseClass {
 
 		// Here we don't need to create object of 'ReadExcelFile' Class because,
 		// we have declared the methods as static
-
+   // We take (ttlRows - 1) because, first row is for header. Hence we should minus that row from 'ttlRows'
 		String data[][] = new String[ttlRows - 1][ttlColumns];
 
 		for (int i = 1; i < ttlRows; i++)// rows = 1, 2
