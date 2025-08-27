@@ -25,7 +25,7 @@ public class ExtentListenerClass implements ITestListener{
 	
 	public void configureReport()
 	{
-		ReadConfig readConfig = new ReadConfig();
+		ReadConfig readConfig = new ReadConfig(); // ReadConfig class object created to read browser value from 'config.properties' file.
 		String timestamp = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
 		String reportName = "MyStoreTestReport-" + timestamp + ".html";
 		htmlReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "//Reports//" + reportName);
