@@ -28,9 +28,16 @@ public class HomePage {
 	
 	@FindBy(css = "#search")
 	WebElement homeSearchBox;
+	
+	@FindBy(xpath = "//a[@class='action showcart']")
+	WebElement miniCart;
+	
+	@FindBy(xpath = "//strong[@class='subtitle empty']")
+	WebElement messageOfMiniCart;
+	
 /*
 	Here we were not able to find the text inside 'Search Box' by using X-path
-	Hence, used css and getAttribute() method. 
+	Hence, use CSS Selector and getAttribute() method. 
 	Used below line as a reference.
 //  String password=driver.findElement(By.cssSelector("ur css path")).getAttribute("placeholder");
  	
@@ -63,6 +70,15 @@ public class HomePage {
 	
 	public String getSearchBoxText() {
 		String txt = homeSearchBox.getAttribute("placeholder");
+		return txt;
+	}
+	
+	public void clickOnMiniCart() {
+		miniCart.click();
+	}
+	
+	public String getMessageOfMiniCart () {
+		String txt = messageOfMiniCart.getText();
 		return txt;
 	}
 
