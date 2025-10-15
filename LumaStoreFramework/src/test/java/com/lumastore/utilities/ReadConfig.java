@@ -7,16 +7,16 @@ import java.util.Properties;
 public class ReadConfig {
 
 	Properties properties;
-	
+
 	String path = "E:\\EDUCATIONAL\\Software Testing\\AUTOMATION TESTING\\LocalGitDirectory\\LumaStoreFramework\\LumaStoreFramework\\Configuration\\config.properties";
-	
-	public ReadConfig() {
-		
+
+	public ReadConfig() { // Constructor
+
 		try {
-		properties = new Properties();
-		
-		FileInputStream fis = new FileInputStream(path);
-		
+			properties = new Properties();
+
+			FileInputStream fis = new FileInputStream(path);
+
 			properties.load(fis);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -24,44 +24,44 @@ public class ReadConfig {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String getBaseUrl() {
-		
+
 		String valueUrl = properties.getProperty("baseUrl");
-		
-		if(valueUrl!=null) 
+
+		if (valueUrl != null)
 			return valueUrl;
-		else 
+		else
 			throw new RuntimeException("url not specified in config file");
 	}
-	
-    public String getBrowser() {
-		
+
+	public String getBrowser() {
+
 		String valueBrowser = properties.getProperty("browser");
-		
-		if(valueBrowser!=null) 
+
+		if (valueBrowser != null)
 			return valueBrowser;
-		else 
+		else
 			throw new RuntimeException("browser not specified in config file");
 	}
-    
-    public String getEmail() {
-		
+
+	public String getEmail() {
+
 		String emailValue = properties.getProperty("email");
-		
-		if(emailValue!=null) 
+
+		if (emailValue != null)
 			return emailValue;
-		else 
+		else
 			throw new RuntimeException("email not specified in config file");
 	}
-    
- public String getPassword() {
-		
+
+	public String getPassword() {
+
 		String passValue = properties.getProperty("password");
-		
-		if(passValue!=null) 
+
+		if (passValue != null)
 			return passValue;
-		else 
+		else
 			throw new RuntimeException("email not specified in config file");
 	}
 }

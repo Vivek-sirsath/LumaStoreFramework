@@ -8,12 +8,12 @@
 	</listeners>
 	<test thread-count="5"  name="Test">
 		<classes>
-			<!--class name="com.opencart.testcases.TC_createAnAccountPageTest" / -->
-			<class name="com.lumastore.testcases.TC_RegisteredUserWelcomePageTest" />
-			<!-- class name="com.lumastore.testcases.TC_homePageTest" / -->
-			<!-- class name="com.lumastore.testcases.TC_loginPageTest" / -->
-			<!--class name="com.lumastore.testcases.TC_dataDrivenLoginPageTest" / -->
-			<!-- class name="com.lumastore.testcases.TC_ProductPurchaseFlowTest" / -->
+            <class name="com.lumastore.testcases.TC_createAnAccountPageTest"/>
+			<!-- class name="com.lumastore.testcases.TC_RegisteredUserWelcomePageTest"/ -->
+			<!--class name="com.lumastore.testcases.TC_homePageTest"/-->
+			<!-- class name="com.lumastore.testcases.TC_loginPageTest"/ -->
+            <!-- class name="com.lumastore.testcases.TC_dataDrivenLoginPageTest"/ -->
+			<!-- class name="com.lumastore.testcases.TC_ProductPurchaseFlowTest"/-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

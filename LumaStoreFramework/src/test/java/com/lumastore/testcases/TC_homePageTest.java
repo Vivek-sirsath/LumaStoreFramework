@@ -9,7 +9,7 @@ import com.lumastore.pageobject.HomePage;
 
 public class TC_homePageTest extends BaseClass {
 	
-	@Test (priority=1)
+	@Test (priority=1, enabled = false)
 	public void verifySearchBoxText() throws InterruptedException  {
 		HomePage hPage = new HomePage(driver);	
 		
@@ -26,7 +26,7 @@ public class TC_homePageTest extends BaseClass {
 		
 	}
 	
-	@Test (priority=2)
+	@Test (priority=2, enabled = false)
 	public void verifySignInLink() {
 		
 //		open url
@@ -40,7 +40,7 @@ public class TC_homePageTest extends BaseClass {
 		
 	}
 	
-	@Test (priority=3)
+	@Test (priority=3, enabled = false)
 	public void vrifySearchFinctionalityInHomePage() {
 		HomePage hPage = new HomePage(driver);
 		
@@ -52,7 +52,7 @@ public class TC_homePageTest extends BaseClass {
 		logger.info("Search functionality verified");
 	}
 	
-	@Test(priority=4)
+	@Test (priority=4, enabled = false)
 	public void verifyCreateAnAccountLink() {
 		HomePage hPage = new HomePage(driver);
 		hPage.clickOnCreateAnAccountLink();
@@ -63,6 +63,20 @@ public class TC_homePageTest extends BaseClass {
 		System.out.println("Page Title: " + pgText);
 		Assert.assertEquals(pgText, "Create New Customer Account");
 		logger.info("Verified the 'Create An Account' link");
+		
+	}
+	
+	@Test (priority=5, enabled = true)
+	public void verifyMessageWhenClickOnEmptyCart() throws InterruptedException {
+		HomePage hPage = new HomePage(driver);
+		
+		hPage.clickOnMiniCart();
+		
+		Thread.sleep(3000);   // InterruptedException
+		String msg = hPage.getMessageOfMiniCart();
+		System.out.println("Message : " + msg);
+		Assert.assertEquals(msg, "You have no items in your shopping cart.");
+		logger.info("Empty cart message verified.");
 		
 	}
 

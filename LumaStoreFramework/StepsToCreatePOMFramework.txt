@@ -3,10 +3,12 @@
   > Click on Next button
   > Keep selected 'maven-archetype-quickstart 1.1', which will create simple maven project
   > Click on Next
+  
 - Enter GroupID : OpencartV1.0 (Generally its a Project Name)
   Enter ArtifactID : OpencartV1.0 (Generally its a Project Name)
   Click on Finish button. 
 - A Maven project will be created.
+
 - Delete 2 packages created by default,
          (src/main/java)
          (src/main/resources)
@@ -15,7 +17,9 @@
          (src/test/java)
          (src/test/resources)
 - We should not keep resource files in (src/test/resources) 
-  because its a package, and package contains java classes.         
+  because its a package, and package contains java classes.  
+  
+- Create a source folder 'src/main/resource' for keeping the 'log4j2.properties' file.         
 
 - Update required dependancies in POM.XML :- 
 
@@ -51,7 +55,7 @@ ________________________________________________________________________________
 1) Appenders - Appenders will decide where to generate logs (console/file)
 2) Loggers - What type of logs generate ( All < Trace < Debug < Info < Warn < Error < Fatal < Off )
 
-- Add 'log4j2.xml' file to (src/test/resources)
+- Add 'log4j2.xml' file to (src/main/resource)
 - Update log messages in 'BaseClass.java' and in Test classes files.
   Eventually after execution logs will be generated in log file.
 
