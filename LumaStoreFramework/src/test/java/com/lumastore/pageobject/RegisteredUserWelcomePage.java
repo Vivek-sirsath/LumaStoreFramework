@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegisteredUserWelcomePage {
 
-	// Create object of WebDriver
+	// 1. Create object of WebDriver
 	WebDriver ldriver;
 
-	// Create constructor
+	// 2. Create constructor
 	public RegisteredUserWelcomePage(WebDriver rdriver) {
 
 		ldriver = rdriver;
@@ -19,10 +19,13 @@ public class RegisteredUserWelcomePage {
 
 	}	
 	
-	// Identify web elements
+	// 3. Identify web elements
 	
 	@FindBy(xpath = "//div[@class='panel header']")
 	WebElement userName;
+	
+	@FindBy(xpath =  "//div[@class='message-success success message']")
+	WebElement registeredUserSuccessMsg;
 	
 	@FindBy(linkText = "What's New")
 	WebElement whatsNewTab;
@@ -64,7 +67,7 @@ public class RegisteredUserWelcomePage {
 	
 		
 	
-	// perform action on web elements	
+	// 4. Perform action on web elements	
 	
 	
 */
@@ -110,7 +113,7 @@ public class RegisteredUserWelcomePage {
 		return searchBoxText;
 	}
 	
-	public String verifyRegisteredUserNameText() {
+	public String getRegisteredUserNameText() {
 		String text = userName.getText();
 		return text;		
 	}
@@ -121,6 +124,11 @@ public class RegisteredUserWelcomePage {
 	
 	public void clickOnSignOutLink() {
 		signOut.click();
+	}
+	
+	public String getRegisteredUserSuccessMsgText() {
+		String textMsg = registeredUserSuccessMsg.getText();
+		return textMsg;
 	}
 	
 }
