@@ -29,7 +29,7 @@ public class TC_dataDrivenLoginPageTest extends BaseClass {
 		Thread.sleep(5000);
 
 		RegisteredUserWelcomePage wPage = new RegisteredUserWelcomePage(driver);
-		String userName = wPage.verifyRegisteredUserNameText();
+		String userName = wPage.getRegisteredUserNameText();
 
 		if (userName.contains(expectedUsername)) {
 			logger.info("Name of the registered user verified");
